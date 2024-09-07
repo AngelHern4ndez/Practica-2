@@ -14,6 +14,7 @@ public class Operaciones {
     private JButton btnRestar;
     private JButton btnMultiplicar;
     private JButton btnDividir;
+    private JButton btnBorrar;
     int num1;
     int num2;
 
@@ -49,6 +50,13 @@ public class Operaciones {
                 num1 = Integer.parseInt(textField1.getText());
                 num2 = Integer.parseInt(textField2.getText());
                 JOptionPane.showMessageDialog(null, "La division es: " + (num1 / num2));
+            }
+        });
+        btnBorrar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textField1.setText("");
+                textField2.setText("");
             }
         });
     }
